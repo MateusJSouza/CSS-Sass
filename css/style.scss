@@ -1,6 +1,5 @@
-$primaryColor: #d62424;
-$secondaryColor: blue;
-$neutraColor: #333;
+@import './variable';
+@import './balls';
 
 @mixin flexCenter($justify_content, $flex_direction) {
   display: flex;
@@ -16,44 +15,10 @@ $neutraColor: #333;
 }
 
 body {
-  @include flexCenter(space-between, column);
+  @include flexCenter(space-between, row);
 
   width: 100%;
   height: 100vh;
 
   background: #1a1a1a;
-}
-
-.bola1 {
-  width: 200px;
-  height: 200px;
-
-  border-radius: 50%;
-
-  background: $primaryColor;
-
-  a {
-    color: $secondaryColor;
-  }
-
-  &:hover {
-    background: $secondaryColor;
-  }
-}
-
-.bola2 {
-  width: 200px;
-  height: 200px;
-
-  border-radius: 50%;
-
-  background: $secondaryColor;
-}
-.bola3 {
-  width: 200px;
-  height: 200px;
-
-  border-radius: 50%;
-
-  background: $neutraColor;
 }
